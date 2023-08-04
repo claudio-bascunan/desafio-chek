@@ -4,7 +4,6 @@ frontend-chek/node_modules
 package-lock.json
 yarn.lock
 .env
-dist/
 build/
 *.log
 debug.log
