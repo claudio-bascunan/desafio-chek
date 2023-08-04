@@ -31,7 +31,7 @@ export class LoginComponent {
     else if (this.email && this.password) {
       try {
         // Solicitud post para iniciar sesión, se envia el correo eléctronico y la clave
-        const response = await this.http.post<{ token: string }>('http://localhost:3000/api/login', { email: this.email, password: this.password })
+        const response = await this.http.post<{ token: string }>('http://18.117.159.180:3000/api/login', { email: this.email, password: this.password })
           .pipe(
             map(response => response.token),
             catchError(error => {

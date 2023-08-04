@@ -30,7 +30,7 @@ export class ForgotPasswordComponent {
 
     try {
       // Solicitud post al servidor para enviar el correo de recuperación
-      const response = await this.http.post<any>('http://localhost:3000/api/reset-password', resetData).toPromise();
+      const response = await this.http.post<any>('http://18.117.159.180:3000/api/reset-password', resetData).toPromise();
       this.showAlertMessage(`Se ha enviado un correo electrónico a ${this.email} para restablecer la clave.`, 'success');
 
       // Tiempo: 5 segundos

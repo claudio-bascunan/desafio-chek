@@ -25,7 +25,7 @@ const port = 3000;
 
 // Se inicia el servidor en el puerto 3000
 app.listen(port, () => {
-    console.log(`Servidor iniciado: http://localhost:${port}`);
+    console.log('Servidor iniciado');
 });
 
 export default app;
