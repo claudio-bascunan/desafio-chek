@@ -1,0 +1,17 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #5a2e93;
+  background: linear-gradient(to bottom, #5d3884, #a04fb7);
+}
+
+footer {
+  color: white;
+  font-family: Arial, sans-serif;
+  padding-top: 50px;
+  text-align: center;
+}

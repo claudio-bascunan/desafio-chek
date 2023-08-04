@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "types": [
+    "@types/node",
+    "@types/supertest"
+  ],
+  "include": ["src/**/*", "tests/index.test.ts"],
+  "exclude": ["node_modules", "dist"]
+}

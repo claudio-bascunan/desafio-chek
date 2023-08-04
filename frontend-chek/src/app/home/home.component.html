@@ -1,0 +1,41 @@
+<div class="container">
+  <button class="button-logout" (click)="logout()">Cerrar sesión</button>
+  <form class="home-form">
+    <div class="table-container">
+      <h1>Bienvenido, {{ firstname }}!</h1>
+      <table>
+        <caption>Historial de acceso</caption>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let log of getPaginatedLogs()">
+            <td>{{ log.date_time }}</td>
+            <td>{{ log.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <div class="pagination-item-double" (click)="goToPage(1)">
+          <img src="../../assets/left-double-arrow.png"/>
+        </div>
+        <div class="pagination-item" (click)="goToPage(currentPage - 1)">
+          <img src="../../assets/left-arrow.png"/>
+        </div>
+        <span>{{ currentPage }} de {{ totalPages }}</span>
+        <div class="pagination-item" (click)="goToPage(currentPage + 1)">
+          <img src="../../assets/right-arrow.png"/>
+        </div>
+        <div class="pagination-item-double" (click)="goToPage(totalPages)">
+          <img src="../../assets/right-double-arrow.png"/>
+        </div>
+      </div>
+    </div>
+  </form>
+  <footer>
+    <p>&copy; Desafío Técnico Chek Agosto 2023 - Claudio Andrés Bascuñán Valdivia</p>
+  </footer>
+</div>

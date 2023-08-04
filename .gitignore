@@ -1,0 +1,13 @@
+node_modules/
+backend-chek/node_modules
+frontend-chek/node_modules
+package-lock.json
+yarn.lock
+.env
+dist/
+build/
+*.log
+debug.log
+coverage/
+*.tmp
+*.cache

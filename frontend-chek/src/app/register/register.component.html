@@ -1,0 +1,57 @@
+<div class="container">
+  <form class="login-form">
+    <div class="logo-container">
+      <img src="../../assets/logoChek.svg" class="logo-img">
+    </div>
+    <div class="tittle-container">
+      <h1 class="register-title">Registrate</h1>
+    </div>
+    <div class="alert-message" *ngIf="showAlert">
+      {{ alertMessage }}
+    </div>
+    <div class="input-container floating-label">
+      <input type="text" placeholder="Nombre" name="firstname" id="firstname" [(ngModel)]="firstname" class="register-input">
+      <label>Nombre</label>
+    </div>
+    <div class="input-container floating-label">
+      <input type="text" placeholder="Apellido" name="lastname" id="lastname" [(ngModel)]="lastname" class="register-input">
+      <label>Apellido</label>
+    </div>
+    <div class="input-container floating-label">
+      <input type="text" placeholder="Fecha de nacimiento" name="birthdate" id="birthdate" [(ngModel)]="birthdate" class="register-input">
+      <label>Fecha de nacimiento</label>
+    </div>
+    <div class="input-container floating-label">
+      <input type="text" placeholder="Correo eléctronico" name="email" id="email" [(ngModel)]="email" class="register-input">
+      <label>Correo eléctronico</label>
+    </div>
+    <div class="input-container floating-label">
+      <div class="password-input-container">
+        <input type="{{ hidePassword ? 'password' : 'text' }}" placeholder="Clave nueva" name="password" id="password" [(ngModel)]="password" class="register-input" (input)="onPasswordInput($event)" required pattern="[0-9]{4}">
+        <label>Clave nueva</label>
+        <span class="password-toggle-btn" (click)="togglePasswordVisibility()">
+          <img [src]="showPasswordIcon">
+        </span>
+      </div>
+    </div>
+    <div class="input-container floating-label">
+      <div class="validatePassword-input-container">
+        <input type="{{ hideValidatePassword ? 'password' : 'text' }}" placeholder="Confirmar clave nueva" name="validatePassword" id="validatePassword" [(ngModel)]="validatePassword" class="register-input" (input)="onValidatePasswordInput($event)" required pattern="[0-9]{4}">
+        <label>Confirmar clave nueva</label>
+        <span class="password-toggle-btn" (click)="toggleValidatePasswordVisibility()">
+          <img [src]="showValidatePasswordIcon">
+        </span>
+      </div>
+    </div>
+      <div class="input-container">
+        <button (click)="registerUser()" class="register-button">Registrarte</button>
+      </div>
+      <label class="have-account">• La clave debe tener 4 digitos<br>• La fecha de nacimiento debe ser yyyy-mm-dd<br>ㅤEjemplo: 2000-02-21</label>
+      <div class="create-account">
+        <button routerLink="/login" class="login-button">Iniciar sesión</button>
+      </div>
+    </form>
+    <footer>
+      <p>&copy; Desafío Técnico Chek Agosto 2023 - Claudio Andrés Bascuñán Valdivia</p>
+    </footer>
+</div>

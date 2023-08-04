@@ -1,0 +1,220 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .logo-container {
+    margin-bottom: 20px;
+  }
+  
+  .logo-img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .login-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #371d53;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .alert-message {
+    padding-bottom: 25px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  input {
+    width: 180px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  input:focus {
+    border-color: #5a2e93;
+  }
+  
+  input::placeholder {
+    color: #7a7a7a;
+  }
+  
+  input:focus::placeholder {
+    color: #5a2e93;
+  }
+
+  .password-input-container {
+    position: relative;
+  }
+  
+  .password-toggle-btn {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .password-toggle-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .password-toggle-btn::before {
+    content: attr(data-label);
+    margin-right: 5px;
+  }
+
+  button {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color: #5a2e93;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .divider {
+    width: 50%;
+    height: 1px;
+    background-color: black;
+    position: relative;
+    margin-top: 10px;
+}
+
+.divider::before {
+    content: "o";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 25%;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  label[routerLink] {
+    color: #5a2e93;
+    cursor: pointer;
+  }
+  
+  button[routerLink] {
+    width: 180;
+    padding: 10px;
+    background-color: transparent;
+    color: #5a2e93;
+    border: 1px solid #5a2e93;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button[routerLink]:hover {
+    background-color: #5a2e93;
+    color: #ffffff;
+  }
+
+  .social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .social-button {
+    width: 180;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 0px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .social-button.google {
+    background-color: #ffffff;
+    color: #4285F4;
+  }
+  
+  .social-button.ripley {
+    background-color: #000;
+    color: #ffffff;
+  }
+  
+  .social-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+
+  .not-register-label {
+    margin-top: 15px;
+  }
+
+  .floating-label {
+    padding-bottom: 10px;
+    position: relative;
+  }
+  
+  .floating-label input {
+    z-index: 1;
+    position: relative;
+  }
+  
+  .floating-label label {
+    position: absolute;
+    font-family: Arial, sans-serif;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #7a7a7a;
+    transition: top 0.3s, font-size 0.3s;
+  }
+  
+  .floating-label input:focus + label,
+  .floating-label input:not(:placeholder-shown) + label {
+    top: -15px;
+    font-size: 10px;
+    color: #5a2e93;
+  }  
