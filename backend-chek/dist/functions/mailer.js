@@ -13,7 +13,7 @@ const transporter = nodemailer_1.default.createTransport({
     },
 });
 function sendMailRestore(destinatario, token) {
-    const enlaceRestablecer = `http://localhost:4200/reset-password?token=${token}`;
+    const enlaceRestablecer = `http://desafio-chek-claudio-bascunan.s3-website.us-east-2.amazonaws.com/reset-password?token=${token}`;
     const contenido = `
     ¡Hola!<br><br>
     Has solicitado restablecer la clave de tu cuenta Chek. Haz clic en el siguiente enlace para continuar:<br><br>
@@ -43,7 +43,7 @@ function sendMailRestore(destinatario, token) {
 }
 exports.sendMailRestore = sendMailRestore;
 function sendMailVerification(destinatario, token) {
-    const enlaceVerificacion = `http://localhost:4200/validate-register?token=${token}`;
+    const enlaceVerificacion = `http://desafio-chek-claudio-bascunan.s3-website.us-east-2.amazonaws.com/validate-register?token=${token}`;
     const contenido = `
     ¡Hola!<br><br>
     Gracias por registrarte en Chek. Por favor, verifica tu correo electrónico haciendo clic en el siguiente enlace:<br><br>
