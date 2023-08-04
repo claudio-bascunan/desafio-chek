@@ -43,7 +43,7 @@ export class ResetPasswordComponent implements OnInit {
         const resetData = { token: this.token, password: this.password };
         try {
           // Solicitud post para cambiar clave. Se envia tanto la password como el token obtenido al principio
-          await this.http.post('http://18.117.159.180:3000/api/change-password', resetData).toPromise();
+          await this.http.post('http://3.136.197.252:3000/api/change-password', resetData).toPromise();
           this.showAlertMessage('Clave restablecida exitosamente.', 'success');
           setTimeout(() => {
             this.router.navigate(['/login']);

@@ -54,7 +54,7 @@ export class RegisterComponent {
 
     try {
       // Solicitud post para registrar usuario. Se envian todos los datos de usuario
-      await this.http.post<any>('http://18.117.159.180:3000/api/register', user).toPromise();
+      await this.http.post<any>('http://3.136.197.252:3000/api/register', user).toPromise();
       this.showAlertMessage('Cuenta creada exitosamente! Verifica tu correo electrónico para activar tu cuenta.', 'error');
       setTimeout(() => {
         this.router.navigate(['/login']);

@@ -29,7 +29,7 @@ export class ValidateRegisterComponent implements OnInit {
   async verifyEmail(token: string) {
     try {
       // Solicitud post que verifica el correo eléctronico de una cuenta
-      const response = await this.http.get<any>(`http://18.117.159.180:3000/api/verify-email?token=${token}`).toPromise();
+      const response = await this.http.get<any>(`http://3.136.197.252:3000/api/verify-email?token=${token}`).toPromise();
     } catch (error) {
       this.router.navigate(['/']);
     }
