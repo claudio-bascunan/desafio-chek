@@ -86,4 +86,8 @@ export class LoginComponent {
       this.showAlert = false;
     }, 5000);
   }
+
+  showAlertGoogleRipley() {
+    this.showAlertMessage('Lo sentimos, está opción no está disponible.', 'error');
+  }
 }

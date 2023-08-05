@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { formatDate } from '@angular/common';
 
 interface LogData {
   date_time: string;
@@ -98,5 +99,10 @@ export class HomeComponent implements OnInit {
     const startIndex = (this.currentPage - 1) * this.pageSize;
     const endIndex = startIndex + this.pageSize;
     return this.logs.slice(startIndex, endIndex);
+  }
+
+  formatDate(dateString: string): string {
+    const date = new Date(dateString);
+    return formatDate(date, 'yyyy-MM-dd HH:mm:ss', 'en-US'); // Formato deseado
   }
 }

@@ -13,7 +13,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let log of getPaginatedLogs()">
-            <td>{{ log.date_time }}</td>
+            <td>{{ formatDate(log.date_time) }}</td>
             <td>{{ log.status }}</td>
           </tr>
         </tbody>
@@ -35,7 +35,4 @@
       </div>
     </div>
   </form>
-  <footer>
-    <p>&copy; Desafío Técnico Chek Agosto 2023 - Claudio Andrés Bascuñán Valdivia</p>
-  </footer>
 </div>
